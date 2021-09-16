@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.4.3)
+  - SwiftCSV (0.6.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - SwiftCSV
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SwiftCSV
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  SwiftCSV: ebc63cacc3820042537288c0cc647946261f7c2c
+
+PODFILE CHECKSUM: e1e3b6d44fc76c5d76b02fff99636af7692ebc77
+
+COCOAPODS: 1.10.1
