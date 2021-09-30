@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (5.4.3)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - SwiftCSV (0.6.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Charts
+  - SwiftCSV
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Charts
+    - SwiftCSV
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  SwiftCSV: ebc63cacc3820042537288c0cc647946261f7c2c
+
+PODFILE CHECKSUM: ff616530afb18945ff05dd04ff25298f81f99976
+
+COCOAPODS: 1.10.1
