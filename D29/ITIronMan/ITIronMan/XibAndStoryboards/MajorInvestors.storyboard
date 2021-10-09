@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Major Investors View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MajorInvestorsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="MajorInvestorsViewController" customModule="ITIronMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJ0-hl-Vkq">
+                                <rect key="frame" x="99.5" y="80" width="215" height="30"/>
+                                <state key="normal" title="發動拉取三大法人和台股日交易"/>
+                                <connections>
+                                    <action selector="requestMajorInvestorsButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hzt-Ww-mI5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQY-qF-nqF">
+                                <rect key="frame" x="113" y="140" width="188" height="30"/>
+                                <state key="normal" title="進入三大法人佔比 pie chart"/>
+                                <connections>
+                                    <action selector="pushToThreeMajorInvestorButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6X1-NN-5t6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3y-Kf-nki">
+                                <rect key="frame" x="27" y="200" width="360" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cJ0-hl-Vkq" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="0IH-jc-7w0"/>
+                            <constraint firstItem="E3y-Kf-nki" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="27" id="5BH-bk-JUn"/>
+                            <constraint firstItem="cJ0-hl-Vkq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="36" id="Xfa-2i-BBD"/>
+                            <constraint firstItem="jQY-qF-nqF" firstAttribute="top" secondItem="cJ0-hl-Vkq" secondAttribute="bottom" constant="30" id="asU-8K-tre"/>
+                            <constraint firstItem="jQY-qF-nqF" firstAttribute="centerX" secondItem="cJ0-hl-Vkq" secondAttribute="centerX" id="dq0-Fk-ZaH"/>
+                            <constraint firstItem="E3y-Kf-nki" firstAttribute="top" secondItem="jQY-qF-nqF" secondAttribute="bottom" constant="30" id="nCE-Xu-zYe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="E3y-Kf-nki" secondAttribute="trailing" constant="27" id="ybt-gB-vxH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stateLabel" destination="E3y-Kf-nki" id="E3O-6j-bjf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.637681159420293" y="88.392857142857139"/>
+        </scene>
+        <!--Major Investors Dashboard View Controller-->
+        <scene sceneID="GOh-dt-Kup">
+            <objects>
+                <viewController storyboardIdentifier="MajorInvestorsDashboardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S9z-fV-CIk" customClass="MajorInvestorsDashboardViewController" customModule="ITIronMan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uKC-0K-Rfb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVi-Fz-dJt">
+                                <rect key="frame" x="20" y="69" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzh-qY-eFA">
+                                <rect key="frame" x="20" y="110" width="153" height="30"/>
+                                <state key="normal" title="計算三大法人成交比重"/>
+                                <connections>
+                                    <action selector="calculateButtonDidTap:" destination="S9z-fV-CIk" eventType="touchUpInside" id="Jtt-9r-nJJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="計算前" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSy-TW-Jmy">
+                                <rect key="frame" x="20" y="148" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjJ-ly-aYv">
+                                <rect key="frame" x="0.0" y="592" width="414" height="250"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="1Fs-M9-imq"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNj-qs-Gvf">
+                                <rect key="frame" x="317" y="110" width="77" height="30"/>
+                                <state key="normal" title="畫出圓餅圖"/>
+                                <connections>
+                                    <action selector="drawPieChartButtonDidTap:" destination="S9z-fV-CIk" eventType="touchUpInside" id="9SM-y1-xem"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bfe-i0-14I">
+                                <rect key="frame" x="0.0" y="322" width="414" height="250"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="J52-9V-OWX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="alf-X2-sbx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zSy-TW-Jmy" firstAttribute="trailing" secondItem="rVi-Fz-dJt" secondAttribute="trailing" id="1Ig-WK-IX7"/>
+                            <constraint firstItem="rVi-Fz-dJt" firstAttribute="top" secondItem="alf-X2-sbx" secondAttribute="top" constant="25" id="2m1-nk-cd2"/>
+                            <constraint firstItem="alf-X2-sbx" firstAttribute="trailing" secondItem="rVi-Fz-dJt" secondAttribute="trailing" constant="20" id="5NU-Yw-i1K"/>
+                            <constraint firstItem="zSy-TW-Jmy" firstAttribute="top" secondItem="qzh-qY-eFA" secondAttribute="bottom" constant="8" symbolic="YES" id="6je-k6-9B6"/>
+                            <constraint firstItem="qzh-qY-eFA" firstAttribute="leading" secondItem="rVi-Fz-dJt" secondAttribute="leading" id="8vL-Lp-3Mm"/>
+                            <constraint firstItem="qzh-qY-eFA" firstAttribute="top" secondItem="rVi-Fz-dJt" secondAttribute="bottom" constant="20" id="DWO-XC-yn2"/>
+                            <constraint firstItem="alf-X2-sbx" firstAttribute="trailing" secondItem="Bfe-i0-14I" secondAttribute="trailing" id="ODE-Mg-ZtL"/>
+                            <constraint firstItem="alf-X2-sbx" firstAttribute="trailing" secondItem="bNj-qs-Gvf" secondAttribute="trailing" constant="20" id="PVC-dF-b1O"/>
+                            <constraint firstItem="hjJ-ly-aYv" firstAttribute="leading" secondItem="alf-X2-sbx" secondAttribute="leading" id="VHE-Lr-xvW"/>
+                            <constraint firstItem="alf-X2-sbx" firstAttribute="trailing" secondItem="hjJ-ly-aYv" secondAttribute="trailing" id="bKv-GN-zlP"/>
+                            <constraint firstItem="Bfe-i0-14I" firstAttribute="leading" secondItem="alf-X2-sbx" secondAttribute="leading" id="cpE-r4-dmy"/>
+                            <constraint firstItem="hjJ-ly-aYv" firstAttribute="top" secondItem="Bfe-i0-14I" secondAttribute="bottom" constant="20" id="d7K-uI-vgU"/>
+                            <constraint firstItem="bNj-qs-Gvf" firstAttribute="centerY" secondItem="qzh-qY-eFA" secondAttribute="centerY" id="l38-Me-1dN"/>
+                            <constraint firstItem="alf-X2-sbx" firstAttribute="bottom" secondItem="hjJ-ly-aYv" secondAttribute="bottom" constant="20" id="mxe-of-bpE"/>
+                            <constraint firstItem="rVi-Fz-dJt" firstAttribute="leading" secondItem="alf-X2-sbx" secondAttribute="leading" constant="20" id="ncm-48-Cj4"/>
+                            <constraint firstItem="zSy-TW-Jmy" firstAttribute="leading" secondItem="rVi-Fz-dJt" secondAttribute="leading" id="vSA-wS-cBr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calculateLabel" destination="zSy-TW-Jmy" id="XcS-po-Lwf"/>
+                        <outlet property="detailPieChartContainer" destination="Bfe-i0-14I" id="t3E-Op-76z"/>
+                        <outlet property="stateLabel" destination="rVi-Fz-dJt" id="nuO-NV-LwM"/>
+                        <outlet property="totalPieChartContainer" destination="hjJ-ly-aYv" id="1Gm-KY-0qP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saD-Tk-56D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921.73913043478262" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
